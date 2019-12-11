@@ -2,16 +2,19 @@
 # from a 2-dimensional Bayesian IRT model using MCMCpack
 # Liam F. Beiser-McGrath, 11/12/19
 
+setwd("~/Dropbox/GitHub/code_examples/irt/")
+
 # load packages
 library(matrixStats)
 library(MCMCpack)
 library(tidyverse)
 
+set.seed(12345)
 
-# Simulate response data for 30 subjects (J) for 10 items (I)
+# Simulate response data for 40 subjects (J) for 20 items (I)
 # (indexing matches MCMCpack notation)
-subjects <- 50
-items <- 30
+subjects <- 40
+items <- 20
 
 df <- data.frame(matrix(rbinom(subjects * items, 1, 0.4), subjects, items))
 
@@ -52,3 +55,5 @@ out_ptiles %>%
   ylab(expression(paste(theta[2]))) +
   theme_minimal() +
   ggtitle("Respondent's Latent Ability from a Bayesian 2-Dimensional IRT Model")
+# save plot for sharing
+ggsave("2d_irt.pdf", height = 8, width = 8)
