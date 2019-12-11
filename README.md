@@ -1,2 +1,3 @@
 # code_examples
-Miscellaneous code examples
+
+A place for storing miscellaneous code examples that may be useful for others.
