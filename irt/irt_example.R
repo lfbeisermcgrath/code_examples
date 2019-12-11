@@ -57,3 +57,4 @@ out_ptiles %>%
   ggtitle("Respondent's Latent Ability from a Bayesian 2-Dimensional IRT Model")
 # save plot for sharing
 ggsave("2d_irt.pdf", height = 8, width = 8)
+ggsave("2d_irt.png", height = 8, width = 8)
